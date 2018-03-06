@@ -18,6 +18,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, FirstActivity.class));
                 finish();
             }
-        }, secondsDelayed * 2000);
+        }, secondsDelayed * 3000);
     }
 }
