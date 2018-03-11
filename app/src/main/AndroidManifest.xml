@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FirstActivity"></activity>
+        <activity android:name=".FirstActivity" />
+        <activity android:name=".EnumActivity" />
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".AdminActivity2" />
+        <activity android:name=".EnumActivity2"></activity>
     </application>
 
 </manifest>
