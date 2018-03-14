@@ -14,46 +14,53 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-public class EnumActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     private EditText Username;
     private EditText Password;
-    private Button Login;
     private FirebaseAuth firebaseAuth;
-    private String s = "@gmail.com";
+    private DatabaseReference database;
+
+    private Button Register;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_enum);
+        setContentView(R.layout.activity_register);
 
         Username = (EditText)findViewById(R.id.username);
         Password = (EditText)findViewById(R.id.password);
-        Login = (Button)findViewById(R.id.btnlogin);
+        Register = (Button)findViewById(R.id.btnregister);
+
+        database = FirebaseDatabase.getInstance().getReference();
         firebaseAuth = FirebaseAuth.getInstance();
 
-        Login.setOnClickListener(new View.OnClickListener() {
+
+        Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                (firebaseAuth.signInWithEmailAndPassword(Username.getText().toString().concat(s),Password.getText().toString()))
+                (firebaseAuth.createUserWithEmailAndPassword(Username.getText().toString(),Password.getText().toString()))
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Toast.makeText(EnumActivity.this,"Login successfull",Toast.LENGTH_LONG).show();
-                                    Intent i = new Intent(EnumActivity.this,EnumActivity2.class);
+                                    Toast.makeText(RegisterActivity.this,"Registration Succesfull",Toast.LENGTH_SHORT).show();
+                                    Intent i = new Intent(RegisterActivity.this,AdminActivity2.class);
                                     startActivity(i);
-                                }else{
+                                }
+                                else{
                                     Log.e("ERROR",task.getException().getMessage());
-                                    Toast.makeText(EnumActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                                    Toast.makeText(RegisterActivity.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
             }
         });
 
-    }
 
+    }
 }

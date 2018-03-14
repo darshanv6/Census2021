@@ -20,7 +20,8 @@
         <activity android:name=".EnumActivity" />
         <activity android:name=".AdminActivity" />
         <activity android:name=".AdminActivity2" />
-        <activity android:name=".EnumActivity2"></activity>
+        <activity android:name=".EnumActivity2" />
+        <activity android:name=".RegisterActivity" />
     </application>
 
 </manifest>
