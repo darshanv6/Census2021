@@ -12,7 +12,7 @@ public class AdminActivity2 extends AppCompatActivity {
 
     private Button Register;
     private Button Signout;
-    private FirebaseAuth firebaseAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,6 @@ public class AdminActivity2 extends AppCompatActivity {
 
         Register = (Button)findViewById(R.id.register);
         Signout = (Button)findViewById(R.id.signout);
-        firebaseAuth = FirebaseAuth.getInstance();
 
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +33,6 @@ public class AdminActivity2 extends AppCompatActivity {
         Signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firebaseAuth.signOut();
                 Intent i = new Intent(AdminActivity2.this,AdminActivity.class);
                 startActivity(i);
             }

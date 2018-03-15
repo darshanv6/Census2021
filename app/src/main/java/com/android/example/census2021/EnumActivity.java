@@ -29,7 +29,7 @@ public class EnumActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enum);
 
-        Username = (EditText)findViewById(R.id.username);
+        Username = (EditText)findViewById(R.id.name);
         Password = (EditText)findViewById(R.id.password);
         Login = (Button)findViewById(R.id.btnlogin);
         firebaseAuth = FirebaseAuth.getInstance();

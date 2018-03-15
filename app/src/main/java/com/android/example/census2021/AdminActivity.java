@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class AdminActivity extends AppCompatActivity {
 
@@ -38,6 +39,8 @@ public class AdminActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else{
+
+            Toast.makeText(AdminActivity.this,"Invalid username or password",Toast.LENGTH_SHORT).show();
             counter--;
             if(counter == 0){
                 Login.setEnabled(false);
