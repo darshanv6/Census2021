@@ -3,14 +3,14 @@ package com.android.example.census2021;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class AdminActivity2 extends AppCompatActivity {
 
-    private Button Register;
-    private Button Signout;
-    private Button Access;
+    private ImageView Register,Enumerator,Database,Logout;
 
 
     @Override
@@ -18,9 +18,12 @@ public class AdminActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin2);
 
-        Register = (Button)findViewById(R.id.register);
-        Signout = (Button)findViewById(R.id.signout);
-        Access = (Button)findViewById(R.id.database);
+        Register = (ImageView)findViewById(R.id.register);
+        Enumerator = (ImageView)findViewById(R.id.enumerator);
+        Database = (ImageView)findViewById(R.id.database);
+        Logout = (ImageView)findViewById(R.id.logout);
+
+
 
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,7 +33,7 @@ public class AdminActivity2 extends AppCompatActivity {
             }
         });
 
-        Signout.setOnClickListener(new View.OnClickListener() {
+        Logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(AdminActivity2.this,AdminActivity.class);
@@ -38,7 +41,7 @@ public class AdminActivity2 extends AppCompatActivity {
             }
         });
 
-        Access.setOnClickListener(new View.OnClickListener() {
+        Database.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(AdminActivity2.this,ViewDatabase.class);
