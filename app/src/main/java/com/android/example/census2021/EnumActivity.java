@@ -22,6 +22,7 @@ public class EnumActivity extends AppCompatActivity {
     private Button Login;
     private FirebaseAuth firebaseAuth;
     private String s = "@gmail.com";
+    private int counter = 5;
 
 
     @Override
@@ -42,12 +43,16 @@ public class EnumActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Toast.makeText(EnumActivity.this,"Login successfull",Toast.LENGTH_LONG).show();
+                                    Toast.makeText(EnumActivity.this,"Login successfull",Toast.LENGTH_SHORT).show();
                                     Intent i = new Intent(EnumActivity.this,EnumActivity2.class);
                                     startActivity(i);
                                 }else{
+                                    counter--;
+                                    if(counter == 0){
+                                        Login.setEnabled(false);
+                                    }
                                     Log.e("ERROR",task.getException().getMessage());
-                                    Toast.makeText(EnumActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                                    Toast.makeText(EnumActivity.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
@@ -55,5 +60,4 @@ public class EnumActivity extends AppCompatActivity {
         });
 
     }
-
 }

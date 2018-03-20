@@ -67,7 +67,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String education = Education.getText().toString().trim();
                 String phone = Phone.getText().toString().trim();
                 String address = Address.getText().toString().trim();
-                String enumid = EnumID.getText().toString().trim();
+                final String enumid = EnumID.getText().toString().trim();
                 String enumemail = Enumemail.getText().toString().trim();
                 String enumpassword = EnumPassword.getText().toString().trim();
                 String sex = SexButton.getText().toString().trim();
@@ -83,14 +83,12 @@ public class RegisterActivity extends AppCompatActivity {
                 datamap.put("Password",enumpassword);
 
 
-
-
                 (firebaseAuth.createUserWithEmailAndPassword(Enumemail.getText().toString(),EnumPassword.getText().toString()))
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    database.push().setValue(datamap);
+                                    database.child(enumid).setValue(datamap);
                                     Toast.makeText(RegisterActivity.this,"Registration Succesfull",Toast.LENGTH_SHORT).show();
                                     Intent i = new Intent(RegisterActivity.this,AdminActivity2.class);
                                     startActivity(i);

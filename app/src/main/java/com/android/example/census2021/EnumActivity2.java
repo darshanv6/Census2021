@@ -25,5 +25,6 @@ public class EnumActivity2 extends AppCompatActivity {
             }
         });
 
+
     }
 }
