@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.example.census2021">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,11 +20,25 @@
             </intent-filter>
         </activity>
         <activity android:name=".FirstActivity" />
-        <activity android:name=".EnumActivity" />
-        <activity android:name=".AdminActivity" />
-        <activity android:name=".AdminActivity2" />
-        <activity android:name=".EnumActivity2" />
-        <activity android:name=".RegisterActivity" />
+        <activity
+            android:name=".AdminActivity"
+            android:label="Login" />
+        <activity
+            android:name=".AdminActivity2"
+            android:label="Admin" />
+        <activity
+            android:name=".EnumActivity2"
+            android:label="Enumerator" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="Register" />
+        <activity
+            android:name=".CensusActivity"
+            android:label="Census Form" />
+        <activity
+            android:name=".EnumActivity"
+            android:label="Login" />
+        <activity android:name=".ViewDatabase"></activity>
     </application>
 
 </manifest>

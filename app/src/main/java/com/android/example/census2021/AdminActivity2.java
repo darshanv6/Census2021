@@ -6,13 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.firebase.auth.FirebaseAuth;
-
 public class AdminActivity2 extends AppCompatActivity {
 
     private Button Register;
     private Button Signout;
-    private FirebaseAuth firebaseAuth;
+    private Button Access;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +20,7 @@ public class AdminActivity2 extends AppCompatActivity {
 
         Register = (Button)findViewById(R.id.register);
         Signout = (Button)findViewById(R.id.signout);
-        firebaseAuth = FirebaseAuth.getInstance();
+        Access = (Button)findViewById(R.id.database);
 
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,8 +33,15 @@ public class AdminActivity2 extends AppCompatActivity {
         Signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firebaseAuth.signOut();
                 Intent i = new Intent(AdminActivity2.this,AdminActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Access.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(AdminActivity2.this,ViewDatabase.class);
                 startActivity(i);
             }
         });
