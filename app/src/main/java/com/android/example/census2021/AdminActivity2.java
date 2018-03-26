@@ -18,7 +18,7 @@ public class AdminActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin2);
 
-        Register = (ImageView)findViewById(R.id.register);
+        Register = (ImageView)findViewById(R.id.register);   
         Enumerator = (ImageView)findViewById(R.id.enumerator);
         Database = (ImageView)findViewById(R.id.database);
         Logout = (ImageView)findViewById(R.id.logout);
