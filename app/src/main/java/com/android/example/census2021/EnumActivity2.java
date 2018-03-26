@@ -1,14 +1,14 @@
 package com.android.example.census2021;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
 public class EnumActivity2 extends AppCompatActivity {
 
-    private Button Entry;
+    private Button Entry,Map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,16 @@ public class EnumActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(EnumActivity2.this,CensusActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Map = (Button) findViewById(R.id.map_button);
+
+        Map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(EnumActivity2.this,MapsActivity.class);
                 startActivity(i);
             }
         });
