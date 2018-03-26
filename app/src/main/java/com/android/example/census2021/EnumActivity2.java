@@ -2,6 +2,7 @@ package com.android.example.census2021;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +31,15 @@ public class EnumActivity2 extends AppCompatActivity {
         Map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(EnumActivity2.this,MapsActivity.class);
+                startActivity(i);
+            }
+        });
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 Intent i = new Intent(EnumActivity2.this,MapsActivity.class);
                 startActivity(i);
             }
