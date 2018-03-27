@@ -38,7 +38,8 @@
         <activity
             android:name=".EnumActivity"
             android:label="Login" />
-        <activity android:name=".ViewDatabase"></activity>
+        <activity android:name=".ViewDatabase" />
+        <activity android:name=".Enuminfo"></activity>
     </application>
 
 </manifest>
