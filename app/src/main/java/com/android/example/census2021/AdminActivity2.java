@@ -46,6 +46,7 @@ public class AdminActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(AdminActivity2.this,AdminActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 

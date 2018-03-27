@@ -92,6 +92,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     Toast.makeText(RegisterActivity.this,"Registration Succesfull",Toast.LENGTH_SHORT).show();
                                     Intent i = new Intent(RegisterActivity.this,AdminActivity2.class);
                                     startActivity(i);
+                                    finish();
                                 }
                                 else{
                                     Log.e("ERROR",task.getException().getMessage());

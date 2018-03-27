@@ -37,6 +37,7 @@ public class AdminActivity extends AppCompatActivity {
         if( (userName.equals("Admin")) && userPassword.equals("admin") ){
             Intent intent = new Intent(AdminActivity.this, AdminActivity2.class);
             startActivity(intent);
+            finish();
         }
         else{
 

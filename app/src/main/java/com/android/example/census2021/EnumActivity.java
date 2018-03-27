@@ -46,6 +46,7 @@ public class EnumActivity extends AppCompatActivity {
                                     Toast.makeText(EnumActivity.this,"Login Successful",Toast.LENGTH_SHORT).show();
                                     Intent i = new Intent(EnumActivity.this,EnumActivity2.class);
                                     startActivity(i);
+                                    finish();
                                 }else{
                                     counter--;
                                     if(counter == 0){

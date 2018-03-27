@@ -23,6 +23,7 @@ public class EnumActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(EnumActivity2.this,CensusActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 

@@ -164,8 +164,10 @@ public class CensusActivity extends AppCompatActivity {
                     }
                 });
 
+
                 Intent i = new Intent(CensusActivity.this, EnumActivity.class );
                 startActivity(i);
+                finish();
 
             }
         });
