@@ -43,7 +43,7 @@ public class EnumActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Toast.makeText(EnumActivity.this,"Login successfull",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(EnumActivity.this,"Login Successful",Toast.LENGTH_SHORT).show();
                                     Intent i = new Intent(EnumActivity.this,EnumActivity2.class);
                                     startActivity(i);
                                 }else{
