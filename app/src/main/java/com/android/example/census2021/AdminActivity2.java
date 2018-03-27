@@ -18,7 +18,7 @@ public class AdminActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin2);
 
-        Register = (ImageView)findViewById(R.id.register);   
+        Register = (ImageView)findViewById(R.id.register);
         Enumerator = (ImageView)findViewById(R.id.enumerator);
         Database = (ImageView)findViewById(R.id.database);
         Logout = (ImageView)findViewById(R.id.logout);
@@ -29,6 +29,14 @@ public class AdminActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(AdminActivity2.this,RegisterActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Enumerator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(AdminActivity2.this,Enuminfo.class);
                 startActivity(i);
             }
         });
