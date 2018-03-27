@@ -109,6 +109,10 @@ public class MapsActivity extends AppCompatActivity
             outState.putParcelable(KEY_LOCATION, mLastKnownLocation);
             super.onSaveInstanceState(outState);
         }
+        else
+        {
+            Log.e("Location","NULL");
+        }
     }
 
     /**

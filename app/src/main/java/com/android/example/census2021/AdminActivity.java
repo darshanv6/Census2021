@@ -34,6 +34,7 @@ public class AdminActivity extends AppCompatActivity {
     }
 
     private void validate(String userName, String userPassword){
+
         if( (userName.equals("Admin")) && userPassword.equals("admin") ){
             Intent intent = new Intent(AdminActivity.this, AdminActivity2.class);
             startActivity(intent);
