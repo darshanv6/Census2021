@@ -69,7 +69,8 @@
         <activity
             android:name=".EnumActivity3"
             android:label="@string/title_activity_enum3"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".HelpActivity" android:label="Help Centre"></activity>
     </application>
 
 </manifest>

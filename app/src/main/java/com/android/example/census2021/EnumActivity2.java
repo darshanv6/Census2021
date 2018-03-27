@@ -40,7 +40,7 @@ public class EnumActivity2 extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(EnumActivity2.this,MapsActivity.class);
+                Intent i = new Intent(EnumActivity2.this,HelpActivity.class);
                 startActivity(i);
             }
         });
