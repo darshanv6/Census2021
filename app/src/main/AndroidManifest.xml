@@ -46,6 +46,7 @@
             android:name=".EnumActivity"
             android:label="Login" />
         <activity android:name=".ViewDatabase" />
+        <activity android:name=".Enuminfo"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
