@@ -25,7 +25,7 @@ public class HelpActivity extends AppCompatActivity {
 
     public void contactViaMail(View view) {
 
-        String Sendersemail = "census2021@gmail.com";
+        String Sendersemail = "";
         composeEmail(Sendersemail);
 
     }
@@ -39,7 +39,7 @@ public class HelpActivity extends AppCompatActivity {
 
     public void contactViaPhone (View view) {
 
-        String phoneNumber = "9980445062";
+        String phoneNumber = "";
         dialANumber(phoneNumber);
     }
 
